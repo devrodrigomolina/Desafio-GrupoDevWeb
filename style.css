@@ -3,24 +3,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
 
 body {
   font-size: 14px;
+  background-color: hsl(218, 28%, 13%);
 }
 
-.container-geral {
-  background-image: url('images/bg-curvy-desktop.svg');
-  background-repeat: no-repeat;
-  background-position: center;  
-  background-size: contain;
-  background-color: hsl(219, 30%, 18%);
+
+.container-geral .image-bg{
+  width: 100%;
+  position: absolute;
+
+  top: 60%;
+  background-color: hsl(217, 28%, 15%);
 }
+
 /* HEADER */
 nav {
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: hsl(217, 28%, 15%);
 }
 nav ul {
   width: 300px;
@@ -40,13 +51,18 @@ nav ul li a {
 /* SECTION 1 */
 .section-1 {
   display: flex;
+  background-color: hsl(217, 28%, 15%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.image {
+  z-index: 10;
+}
 .infos {
   text-align: center;
   width: 600px;
+  z-index: 10;
 }
 .infos h1 {
   color: white;
@@ -63,21 +79,26 @@ nav ul li a {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: white;
-  background-image: linear-gradient(to right,  hsl(176, 68%, 64%) , hsl(198, 60%, 50%));
+  background-image: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+  );
 }
 
 /* SECTION 2 */
 
 .cards {
-  background-color: hsl(218, 28%, 13%);
+  width: 700px;
   height: 600px;
-  margin: 240px auto;
+  margin: 140px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+
 }
 .card {
   display: flex;
@@ -97,4 +118,147 @@ nav ul li a {
 }
 .cards img {
   width: 110px;
+}
+
+/* SECTION 3 */
+.produtive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.produtive p {
+}
+
+.produtive a {
+  color: hsl(176, 68%, 64%);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* SECTION 4 CARDS COMMENTS */
+.cards-comments {
+  width: 60vw;
+  margin: 0 auto;
+  padding-top: 160px;
+  padding-bottom: 260px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cards-comments .card-comment {
+  width: 320px;
+  height: 180px;
+  padding: 20px;
+  background-color: hsl(219, 30%, 18%);
+  color: white;
+}
+.cards-comments .card-comment .user {
+  display: flex;
+  margin-top: 40px;
+}
+.cards-comments .card-comment .user img {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.quotes {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: -20px;
+  left: -45px;
+}
+.user-name {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SECTION 3 */
+.early-acess {
+  background-color: hsl(218, 28%, 13%);
+  position: relative;
+}
+.container-early {
+  margin: 0 auto;
+  padding: 50px;
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  top: -120px;
+  left: 25%;
+  right: 25%;
+  background-color: hsl(219, 30%, 18%);
+  border-radius: 8px;
+}
+.container-early h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.3rem;
+  padding-bottom: 20px;
+}
+.container-early p {
+  text-align: center;
+  color: white;
+  padding-bottom: 40px;
+}
+.container-early input {
+  width: 65%;
+  height: 50px;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-right: 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+footer {
+  height: 400px;
+  background-color: hsl(216, 53%, 9%);
+  padding-top: 200px;
+  padding-left: 200px;
+  display: flex;
+}
+.img-footer .logo {
+  width: 140px;
+}
+.img-footer .localizacao {
+  display: flex;
+}
+.img-footer .localizacao .loc {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.img-footer p {
+  margin-top: 20px;
+  width: 300px;
+  color: white;
+}
+
+.contact {
+  color: white;
+}
+
+.contact-1,
+.contact-2 {
+  display: flex;
+  margin-left: 100px;
+  margin-top: 40px;
+}
+.contact-1 img,
+.contact-2 img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.menu-itens,
+.menu-itens-2 {
+  color: white;
+  margin-left: 200px;
+  margin-top: 50px;
+  font-size: 1.1rem;
 }
