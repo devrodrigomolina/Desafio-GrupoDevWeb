@@ -5,20 +5,21 @@
 }
 
 body {
-  max-width: 1440px;
-  margin: 0 auto;
+  font-size: 14px;
+}
+
+.container-geral {
   background-image: url('images/bg-curvy-desktop.svg');
   background-repeat: no-repeat;
-  background-position: bottom;  
+  background-position: center;  
   background-size: contain;
   background-color: hsl(219, 30%, 18%);
-  font-size: 14px;
 }
 /* HEADER */
 nav {
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 nav ul {
@@ -66,4 +67,34 @@ nav ul li a {
   font-weight: bold;
   color: white;
   background-image: linear-gradient(to right,  hsl(176, 68%, 64%) , hsl(198, 60%, 50%));
+}
+
+/* SECTION 2 */
+
+.cards {
+  background-color: hsl(218, 28%, 13%);
+  height: 600px;
+  margin: 240px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-card {
+  font-size: 1.1rem;
+}
+.cards p {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 230px;
+}
+.cards img {
+  width: 110px;
 }
